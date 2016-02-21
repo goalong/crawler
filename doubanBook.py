@@ -5,6 +5,9 @@ import urllib2
 
 
 class DoubanSpider(object):
+	'''
+	爬取豆瓣图书top250
+	'''
 	def __init__(self):
 		self.pageNum = 1
 		self.cur_url = "http://book.douban.com/top250?start={pageNum}&filter=&type="
