@@ -1,5 +1,10 @@
 # encoding: utf-8
 
+"""
+Todo:
+将数据存储到mongo中
+"""
+
 import urllib2
 import urllib
 import json
