@@ -14,7 +14,7 @@ class DoubanSpider(object):
 		self.datas = []
 		self._top_num = 1
 		print "豆瓣图书Top250爬虫准备爬取数据。。。"
-	def get_page(self, cur_page):
+	def get_html(self, cur_page):
 		url = self.cur_url
 		try:
 			html = urllib2.urlopen(url.format(pageNum=(cur_page-1)*25)).read().decode('utf-8')
@@ -38,7 +38,7 @@ class DoubanSpider(object):
 
 	def start_spider(self):
 		while self.pageNum <= 10:
-			html = self.get_page(self.pageNum)
+			html = self.get_html(self.pageNum)
 			
 			self.find_title(html)
 			self.pageNum += 1
